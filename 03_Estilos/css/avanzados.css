@@ -1,0 +1,46 @@
+footer>p {
+    color: crimson
+}
+
+footer:hover p.derechos {
+    font-size: 3rem;
+}
+
+article .p2+p:hover {
+    color: blue
+}
+
+article .p2+p:first-letter {
+    font-size: 3rem;
+    font-family: fantasy;
+}
+
+article .p2+p:first-line {
+    font-weight: bold;
+}
+
+section::before {
+    content: "!!!!";
+    color: salmon
+}
+
+section::after {
+    content: "!!!!";
+    color: salmon
+}
+
+section {
+    counter-reset: section;
+}
+section p::before {
+    counter-increment: section;
+    content: counter(section)
+    " " 
+    url(../image/favicon.png);
+}
+
+[name="Lorem"] {color: mediumvioletred}
+
+/* [class="p1"] {color: maroon}
+
+.p1 { color: limegreen} */
