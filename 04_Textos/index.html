@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Textos</title>
+    <style>
+        blockquote {
+            quotes: '\00AB' '\00BB' ;
+        }
+        blockquote::before {
+            content: open-quote
+        }
+        blockquote::after {
+            content: close-quote
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menús basados en la etiquta menu / menuitem, propuestas en HTML 5.1 y eliminadas en HTML 5.2 -->
+    <nav>
+        <menu>
+            <menuitem>Item 1</menuitem>
+            <menuitem>Item 2</menuitem>
+            <menuitem>Item 3</menuitem>
+            <menuitem>Item 4</menuitem>
+            <menuitem>Item 5</menuitem>
+        </menu>
+    </nav>
+
+    <!-- Etiqueta details, definida en HTML 5.2 -->
+    <details>
+        <summary>
+           Economía 
+        </summary>
+        <p>Su economía está basada, principalmente, en el sector de la <strong>industria</strong> y el <strong>comercio</strong> ,​ debido a la presencia de los astilleros y las actividades de la zona portuaria y de la Zona Franca.​ El otro sector base de la economía gaditana es el <strong>turismo</strong>, debido a sus playas, a las fiestas locales y al importante patrimonio histórico que posee. </p>
+        <p>A su vez, Cádiz es la provincia española con más nivel de <strong>desempleo</strong>, con unos niveles de alrededor de un 30% de paro, seguida muy de cerca por otras cuatro provincias andaluzas, que se mantienen en torno al 27,8% aproximadamente.</p>
+        <p>Provincias andaluzas con nieles de desempleo cercano al 30%</p>
+    </details>
+
+    <!-- Etiqueta Dialog, definida en HTML 5.2 y ejemplo de su uso basado en JavaScript -->
+    <button id="open">Open Dialog</button>
+    <button id="close">Close Dialog</button>
+    
+    <dialog id="dialog">
+      <h2>Dialog Title</h2>
+      <p>Dialog content and other stuff will go here</p>
+    </dialog>
+    
+    <script>
+        const dialog = document.getElementById("dialog");
+        
+        document.getElementById("open").addEventListener("click", () => {
+        dialog.show();
+        });
+        
+        document.getElementById("close").addEventListener("click", () => {
+        dialog.close();
+        });
+    </script>
+    <hr>
+    <!-- Bloques de cita y referencais a las fuentes --> 
+    <p>Voy a contaros algo que escribio Tolkien en <cite>El Señor de los Anillos</cite>:</p>
+    <blockquote cite="El Señor de los Anillos" title="El Señor de los Anillos">Este libro trata principalmente de los Hobbits, y el lector descubrirá en sus páginas mucho del carácter y algo de la historia de este pueblo. Podrá encontrarse más información en los extractos del Libro Rojo de la Frontera del Oeste que ya han sido publicados con el título de El Hobbit. El relato tuvo su origen en los primeros capítulos del Libro Rojo, compuesto por Bilbo Bolsón -el primer Hobbit que fue famoso en el mundo entero - y que él tituló Historia de una ida y de una vuelta, pues contaba el viaje de Bilbo hacia el Este y la vuelta, aventura que más tarde enredaría a todos los Hobbits en los importantes acontecimientos que aquí se relatan. (<cite>El Señor de los Anillos</cite>)</blockquote>
+    <hr>
+    <!-- Bloques de texto preformateado empleado para representar código -->
+    <p>En Javascrip se pondría</p>
+    <pre>
+        <code>
+            var a = 25; 
+            for (i=0; i a; i++) {
+                x = 12;
+                y = 21
+            }
+        </code> 
+    </pre>
+</body>
+</html>
