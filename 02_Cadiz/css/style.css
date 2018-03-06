@@ -1,19 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Coiny');
 
-/* header p {
+body {
+    font-family: 'Roboto', Calibri, sans-serif
+}
+
+header h1 {
+    font-family: 'Coiny', cursive;
+    font-size: 3rem;
+    margin-bottom: 0.1rem;
+}
+
+header p {
     color: maroon;
     font-size: 1.5rem;
     font-weight: bold;
+    margin: 0;
 }
 
-aside a:link {
-    color: lime;
+h2 {
+    font-style: italic;
+    font-weight:bold;
 }
-
-aside a:visited {
-    color: crimson
-}
-
-
+/*
 footer p {
     color: navy
 } */
+
+q {
+    quotes: '\00AB' '\00BB' ;
+}
