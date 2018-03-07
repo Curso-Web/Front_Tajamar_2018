@@ -4,6 +4,16 @@ body {
     font-family: 'Roboto', Calibri, sans-serif
 }
 
+.container {
+    width: 90%;
+    max-width: 1080px;
+    min-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 header h1 {
     font-family: 'Coiny', cursive;
     font-size: 3rem;
@@ -28,4 +38,8 @@ footer p {
 
 q {
     quotes: '\00AB' '\00BB' ;
+}
+
+p {
+    width: 30%;
 }
