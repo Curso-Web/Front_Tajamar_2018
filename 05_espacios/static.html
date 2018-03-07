@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {box-sizing: border-box}
+    .container {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        border: 1px solid;
+        /* overflow: hidden; */
+    }
+
+    .container::after {
+        content: '';
+        display: block;
+        clear: both;
+    } 
+
+    p {
+        background-color: salmon;
+        /* margin-right: 5%; */
+        width: 20%;
+        padding: 1rem;
+        float: left;
+    }
+    p:not(:last-of-type) {
+        margin-right: 6.66%
+    }
+</style>
+<body>
+    <div class="container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime doloribus rem fuga quis, dolores recusandae maiores voluptates, quae distinctio quos voluptate minima! Repudiandae porro esse quam quae maxime voluptas necessitatibus.</p>
+        <p>Distinctio assumenda optio tenetur porro inventore sint voluptatum aut quas? Est aliquam explicabo unde animi ipsa rerum. Esse exercitationem, quaerat qui odio corporis quod earum nesciunt dignissimos iure ducimus neque.</p>
+        <p>Excepturi corporis, voluptatum necessitatibus, delectus veritatis dolorum qui, dolores sequi atque suscipit minus inventore saepe minima repellendus! Non porro tenetur pariatur consequuntur odio id, illum dolore laborum quisquam blanditiis doloribus.</p>
+        <p>Ducimus consequatur eveniet optio deleniti est? Doloribus laboriosam aliquam eos officiis deleniti soluta quasi repellat veritatis maiores, consectetur, cupiditate accusamus, in aspernatur iste consequuntur non error ratione eius. Natus, adipisci.</p>
+    </div>    
+</body>
+</html>
