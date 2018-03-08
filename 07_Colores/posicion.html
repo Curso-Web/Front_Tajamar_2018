@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {box-sizing: border-box;}
+        body {
+            height: 100vh;
+        }
+        .container {
+            width: 90%;
+            margin: 5%;
+            height: 90%;
+            border: 1px solid;
+            position: relative;
+            background-color: peachpuff
+        }    
+        .caja {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid */;
+        }
+        .caja1 {
+            top: 50px;
+            left: 50px; 
+            background-color: rgba(0,0,255,.5)   
+        }
+        .caja2 {
+            top: 100px;
+            left: 100px; 
+            background-color: rgba(165,42,42,.5)
+        }
+        .caja2:hover {
+            background-color: rgba(165,42,42,.5)
+        }
+
+        .caja3 {
+            top:200px;
+            left:300px;
+            /* background: rgba(52,62,247,1);
+            background: -moz-linear-gradient(left, rgba(52,62,247,1) 0%, rgba(241,111,92,1) 31%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52,62,247,1)), color-stop(31%, rgba(241,111,92,1)), color-stop(51%, rgba(246,41,12,1)), color-stop(71%, rgba(240,47,23,1)), color-stop(100%, rgba(231,56,39,1)));
+            background: -webkit-linear-gradient(left, rgba(52,62,247,1) 0%, rgba(241,111,92,1) 31%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+            background: -o-linear-gradient(left, rgba(52,62,247,1) 0%, rgba(241,111,92,1) 31%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+            background: -ms-linear-gradient(left, rgba(52,62,247,1) 0%, rgba(241,111,92,1) 31%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%); */
+            background: linear-gradient(to right, rgba(52,62,247,1) 0%, rgba(241,111,92,1) 31%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
+            /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#343ef7', endColorstr='#e73827', GradientType=1 ); */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja caja1"></div>
+        <div class="caja caja2">
+            <p>Hola</p> 
+        </div>
+        <div class="caja caja3"></div>
+    </div>
+</body>
+</html>
+
+

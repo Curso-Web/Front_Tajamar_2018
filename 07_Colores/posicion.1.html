@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {box-sizing: border-box;}
+        body {
+            height: 100vh;
+            
+        }
+        .container {
+            width: 90%;
+            margin: 5%;
+            height: 90%;
+            border: 1px solid;
+            position: relative;
+        }    
+        .caja {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            /* border: 1px solid */;
+            opacity: .5
+        }
+        .caja1 {
+            top: 50px;
+            left: 50px; 
+            background-color: rgb(0,0,255);
+            opacity: .5
+        }
+        .caja2 {
+            top: 100px;
+            left: 100px; 
+            background-color: rgb(165,42,42)
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caja caja1"></div>
+        <div class="caja caja2">
+            <p>Hola</p>
+        </div>
+    </div>
+</body>
+</html>
