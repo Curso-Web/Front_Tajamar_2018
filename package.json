@@ -1,0 +1,31 @@
+{
+  "name": "front_tajamar_2018",
+  "version": "1.0.0",
+  "description": "Ejercicios del módulo Front",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alce65/Front_Tajamar_2018.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "Learning"
+  ],
+  "author": "Alejandro Cerezo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alce65/Front_Tajamar_2018/issues"
+  },
+  "homepage": "https://github.com/alce65/Front_Tajamar_2018#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
