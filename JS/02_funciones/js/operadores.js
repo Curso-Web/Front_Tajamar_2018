@@ -32,6 +32,10 @@ console.log(x != y)
 console.log(x === y)
 console.log(x !== y)
 
+// ERROOOOOOR
+// if(x = 22) {
+// }
+
 if(x === 12) {
     console.log("Estoy dentro del if")
 }
@@ -45,7 +49,18 @@ console.log(x < y)
 
 console.log(x.length === y.length)
 
-// extpresion ? true : false
+// Operador ternario
+// expresion ? true : false
 
 let edad = 32
 console.log(edad > 30 ? 'Buenos días' : 'Hola chaval')
+
+let a = 12
+let b = 2
+let c = 4
+
+if( a > b || a < z ) {
+    console.log("Comprobado")
+}
+
+console.log(2 * 4 + 5)
