@@ -5,7 +5,7 @@
      -2 si el argumento no es un número
      -3 si el argumento contene decimales
 */
-function calcularPar(n) {
+function isPar(n) {
     let r = 0
     if (isNaN(n / 2)) {
         r = -2
@@ -21,7 +21,7 @@ function sumarPares (aDatos) {
 
     let total = 0
     for (let i = 0; i < aDatos.length; i++) {
-        if (!calcularPar(aDatos[i])) {
+        if (!isPar(aDatos[i])) {
             total += aDatos[i]
             console.log(`El parcial es ${total}`)
         }
@@ -30,7 +30,7 @@ function sumarPares (aDatos) {
 }
 
 function verSumaPares(aDatos) {
-    console.log('El resultado de la suma de los pares es',
+    console.log('El resultado de la suma de los pares es ',
                     sumarPares(aDatos))
 }
 

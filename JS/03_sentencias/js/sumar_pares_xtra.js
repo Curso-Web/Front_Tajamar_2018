@@ -32,10 +32,12 @@ function sumarPares (aDatos) {
 }
 
 function verSumaPares(aDatos) {
-
-    //console.log(`El parcial es ${total}`)
-    console.log('El resultado de la suma de los pares es',
-                    sumarPares(aDatos))
+    let oResultados = sumarPares(aDatos)
+    for (let i = 0; i < oResultados.parciales.length; i++) {
+        console.log(`El parcial es ${ oResultados.parciales[i]}`)
+    }
+    console.log('El resultado de la suma de los pares es ',
+            oResultados.total  )
 }
 
 let aDatos = [23, 54, 65, 34, 78, 67, 57, 89]
