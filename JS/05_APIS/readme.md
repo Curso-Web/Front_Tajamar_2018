@@ -6,8 +6,10 @@ Lenguaje de programación
 - Operadores: +, -, *, /, %, ||, &&, !, typeof
 - APIs
     - Core
-        - Funciones globales: parsInt(), parseFloat(), isNaN()
+        - Funciones globales: paresInt(), parseFloat(), isNaN()
         - Metodos de los objetos.
+            - Wraper Objects: String, Number, Boolean
+            - Object, Array, Date, RegExp, Error...
     - Host (Browser, NodeJS)
         - Objeto Window -> BOM -> alert(), setTimeout()
         - Objeto Documento -> DOM
