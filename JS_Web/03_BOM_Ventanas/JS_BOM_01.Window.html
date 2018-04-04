@@ -1,0 +1,151 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM - JavaScript_001</title>
+	<meta name="description" content="Ejercicios del Curso CMF">
+	<meta name="author" content="Alejandro">
+  	<link rel="shortcut icon" href="fav_icon.png">
+  	<link href="../../_bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  	<link rel="stylesheet" href="default.css">
+  	<script type="text/javascript" href="../../_bootstrap/js/bootstrap.js"></script>
+  	<script type="text/javascript">
+
+  		function recuperarTamaño() {
+  			if (oVentanaImg) {
+  				oVentanaImg.moveTo(1, 1);
+  				oVentanaImg.resizeTo(oVentanaImg.iAncho, oVentanaImg.iAlto);
+			}
+  		}
+
+  		function ajustarTamaño() {
+            //Ajusta la ventana al tamaño de la pantalla
+  		    oVentanaImg.iAncho = window.innerWidth;
+  		    oVentanaImg.iAlto = window.innerHeight;
+			oVentanaImg.moveTo(1, 1);
+			oVentanaImg.resizeTo(screen.availWidth, screen.availHeight);
+		}
+
+		function ajustarImagen_old() {
+            // Ajusta la ventana al tamaño de la imagen
+  			if (oVentanaImg) {
+				var xAncho = imagenFichero.width + 
+				(window.outerWidth - window.innerWidth)
+				// 710 + 16 (en Chrome)
+				var yAlto = imagenFichero.height +
+				(window.outerHeight - window.innerHeight)
+				 // 570 + 69 (en Chrome)
+				oVentanaImg.resizeTo(xAncho,yAlto);
+			}
+		}
+
+		function ajustarImagen() {
+		    // Ajusta la ventana al tamaño de la imagen
+		    if (oVentanaImg) {
+		        oVentanaImg.iAncho = imagenFichero.width +
+				(window.outerWidth - window.innerWidth)
+		        // 710 + 16 (en Chrome)
+		        oVentanaImg.iAlto = imagenFichero.height +
+				(window.outerHeight - window.innerHeight)
+		        // 570 + 69 (en Chrome)
+		        oVentanaImg.resizeTo(oVentanaImg.iAncho, oVentanaImg.iAlto);
+		    }
+		}
+
+		function cargarImagen() {
+		    if (!oVentanaImg) {
+		        oVentanaImg = window.open(imagenFichero.src, "", "top=200, left=300");
+		        //width=300, height=400, status=yes, menubar=yes"
+		        oVentanaImg.iAncho = window.innerWidth;
+		        oVentanaImg.iAlto = window.innerHeight;
+		    }
+  		}
+
+  		function cerrarVentana () {
+  		    if (this.id == "btn_2" && oVentana) {
+  		        oVentana.close();
+  		        oVentana = null;
+			}
+			if (this.id == "btn_4b" && oVentanaImg) {
+			    oVentanaImg.close();
+			    oVentanaImg = null;
+			}
+  		}
+
+  		function abrirVentana() {
+  		    if (!oVentana) {
+  		        oVentana = window.open("", "", "top=200, left=300, width=300, height=400, status=yes, menubar=yes scrollbars=yes");
+  		        // el segundo parámetro es _blank (único valor con sentido)
+  		        // status=yes, menubar=yes ¿sin efecto en Chrome?
+  		        // resizable=yes solo IE 
+  		        // toolbar=yes solo IE y Firefos 
+  		        oVentana.document.write("<p>Mensaje emergente en una ventana</p>");
+  		    }
+  		
+  		}
+
+		function main () {
+			document.getElementById("btn_1").onclick = abrirVentana;
+			document.getElementById("btn_2").onclick = cerrarVentana;
+			document.getElementById("btn_3").onclick = cargarImagen;
+			document.getElementById("btn_4").onclick = ajustarImagen;
+			document.getElementById("btn_4b").onclick = cerrarVentana;
+			document.getElementById("btn_5").onclick = ajustarTamaño;
+			document.getElementById("btn_6").onclick = recuperarTamaño;
+		}  	
+
+		var oVentana, oVentanaImg, iRepeat = 0;
+
+		var imagenFichero = new Image();
+		imagenFichero.src = "images/33.jpg";
+
+		//window.addEventListener("load", main, false);
+	  	document.addEventListener("DOMContentLoaded", main, false);	
+		// metodo de DOM nivel 2  que indica al agente de usuario que permanezca atento:
+		// evento: en este caso la carga completa de la página
+		// función a lanzar: en este caso main
+		// orden del flujo de eventos: false salta la fase de captura
+		// el equivalente del DOM nivel 1 sería
+		// window.onload = main
+
+  	</script>
+</head>
+<body>
+	<header>
+		<h1>Ejemplos del uso del BOM</h1>
+	</header>	
+	<section class="container.fluid">
+		<div class="row">
+			<div class="col-md-2 col-md-offset-2">
+				<p>Abrir/Cerrar una ventana vacia</p>
+			</div>
+			<div class="col-md-5 col-md-offset-1">
+				<button id="btn_1" type="button" class="btn btn-primary">Abrir ventana</button>
+				<button id="btn_2" type="button" class="btn btn-primary">Cerrar ventana</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2 col-md-offset-2">
+				<p>Abrir/Cerrar una ventana con una imagen</p>
+			</div>
+			<div class="col-md-7 col-md-offset-1">
+				<button id="btn_3" type="button" class="btn btn-primary">Cargar imagen</button>
+				<button id="btn_4" type="button" class="btn btn-primary">Ajustar imagen</button>
+                <button id="btn_4b" type="button" class="btn btn-primary">Cerrar imagen</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-2 col-md-offset-2">
+				<p>Ajustar el tamaño de la ventana con la imagen</p>
+			</div>
+			<div class="col-md-5 col-md-offset-1">
+				<button id="btn_5" type="button" class="btn btn-primary">Tamaño pantalla </button>
+				<button id="btn_6" type="button" class="btn btn-primary">Tamaño anterior</button>
+			</div>
+		</div>
+
+
+	</section>
+</body>
