@@ -1,0 +1,14 @@
+*, *::after, *::before, *:after, *:before {
+    box-sizing: border-box;
+}
+body {
+    background-color: bisque;
+    margin: 3rem;
+}
+main {
+    min-height: 60vh;
+}
+
+.crono {
+    font-size: 4rem
+}
