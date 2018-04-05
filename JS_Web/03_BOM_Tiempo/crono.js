@@ -21,7 +21,7 @@ clearTimeout(idT) */
                 aBotones[0].textContent = 'Continuar'
                 aBotones[1].disabled = false
                 aBotones[2].disabled = true   
-                idI = setInterval(function() {
+                idI = setInterval(() => {
                     crono += 0.01
                     eCrono.innerHTML = crono.toFixed(2)
                 }, 100)
