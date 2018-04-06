@@ -1,0 +1,87 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Mostrar texto oculto - JavaScript_001</title>
+	<meta name="description" content="Ejercicios del Curso CMF">
+	<meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  	<link rel="stylesheet" href="css/javascript_001.css">
+  	<style>
+		.oculto { display: none; }
+		.visible { display: inline; }
+	</style>
+  	<script>
+
+        // Supone que las clases ocultar y mostrar son las únicas del texto
+		function main ()  {
+	 		function muestra() {
+				var oElemento = document.getElementById("adicional");
+				var oEnlace = document.getElementById("enlace");		
+				if 	(oElemento.className == "oculto"){
+					oElemento.className = "visible";
+					oEnlace.innerHTML = "Ocultar artículo";}
+				else { // elemento.className == "visible")
+					oElemento.className = "oculto";
+					oEnlace.innerHTML = "Seguir leyendo";
+					}
+			}
+		
+//			*if (document.getElementById("texto").style.height == "auto"){
+//	
+//			document.getElementById("texto").style.height = "200px";
+//			document.getElementById("enlace").textContent = "Ver más";
+//			}else{*/
+//			document.getElementById("texto").style.height = "auto";
+//			document.getElementById("enlace").textContent = "Ver menos";
+//			}
+
+		document.getElementById("enlace").addEventListener("click",muestra,false)
+		} // fin de la función main
+		
+		document.addEventListener("DOMContentLoaded",main,false); 
+	</script>
+</head>
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>Scriptum
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+ 		<h2>Mensaje del consul</h2>
+		<p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed
+		mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+		commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae,
+		rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae,
+		ultrices porttitor, pede. <span id="adicional" class="oculto">Nullam sit amet
+		nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+		faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing
+		ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem
+		ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque. Donec
+		lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam
+		sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+		vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id
+		metus.</span></p>
+		<a id="enlace" href="#">Seguir leyendo</a>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

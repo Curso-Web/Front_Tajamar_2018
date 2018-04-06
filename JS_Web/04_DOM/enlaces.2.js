@@ -18,7 +18,9 @@ class Enlace {
         this.count++;
         if (this.count === this.items) {
             nodeItem.parentNode.parentNode.outerHTML = 
-                    "<p>Lo siento, parece que estoy ilocalizable</p>";
+                    `<div>
+                        <p>Lo siento, parece que estoy ilocalizable</p>
+                    </div>`;
         }
     }
 }

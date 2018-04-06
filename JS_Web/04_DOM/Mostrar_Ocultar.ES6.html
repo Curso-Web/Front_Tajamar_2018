@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Mostrar texto oculto - JavaScript_001</title>
+	<meta name="description" content="Ejercicios del Curso CMF">
+	<meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  	<link rel="stylesheet" href="./javascript_001.css">
+  	<style>
+		.oculto { display: none; }
+        span {
+            color:darkblue
+        }
+        a, a:visited {
+            color: crimson;
+        }
+	</style>
+  	<script src="./Mostrar_Ocultar.js"></script>
+</head>
+
+ <body> 
+  	<header>
+  	    <h1>Trilogía del Spawl</h1>
+	</header>
+	<article id="articulo1" class="article_long">
+ 		<h2>Neuromante</h2>
+		<p id="texto">Un futuro invadido por microprocesadores, en el que la información es la materia prima. Vaqueros como Henry Dorrett Case se ganan la vida hurtando información, traspasando defensas electrónicas, bloques tangibles y luminosos, como rascacielos geométricos. En este espeluznante y sombrío futuro la mayor parte del este de Norteamérica es una única y gigantesca ciudad, casi toda Europa un vertedero atómico y Japón una jungla de neón, corruptora y brillante, donde una persona es la suma de sus vicios. <span id="adicional" class="oculto"> En palabras de Sterling, otro de los autores de referencia de esta corriente: <q>Despídete de todos los futuros rancios. He aquí un mundo enteramente nuevo, intenso como una sacudida eléctrica. La prosa de William Gibson, asombrosa por su claridad y oficio, se convierte en poesía eléctrico-tecnológica... Una fascinante historia de aventuras, brillante y coherente como un láser.</q></span></p>
+		<a id="enlace" href="#articulo1">Seguir leyendo</a>
+	</article>
+     <article id="articulo2" class="article_long">
+         <h2>Conde Cero</h2>
+         <p>Siete años después de los acontecimientos de Neuromante, el Conde Cero, pirata de sistemas de información, consigue una rara pieza de software, se conecta a la matriz, y casi pierde la cabeza. La Matriz de Ciberespacio, una base sinérgica que abarca todo el planeta, se ha transformado en una red sensitiva. <span class="oculto">Pero la humanidad no se ha dado cuenta. La muchacha cuyo sistema nervioso ha sido alterado para que pueda tener acceso a la Matriz, tampoco entiende lo que ocurre. Mientras, en Francia, la encargada de una galería trata de encontrar al misterioso y desconocido creador de ciertos objetos de arte, poderosos y únicos.</span>
+         </p>
+         <a href="#articulo2">Seguir leyendo</a>
+     </article>
+     <article id="articulo3" class="article_long">
+         <h2>Mona Lisa Acelerada</h2>
+         <p>En el universo alucinatorio del cyberespacio, a la vez lírico y mecánico, erótico y violento, la vida de la joven Mona se cruza inevitablemente con la vida de la famosa Angie Mitchell. Angie ha sido capaz desde niña de entrar en el cyberespacio sin necesidad de una computadora. <span class="oculto">Dentro de la matriz una entidad fantasmal -que ha acumulado vastas cantidades de información para obtener lo que quiere- pretende utilizar a Angie en una trama que ella misma no puede controlar, ni siquiera entender. Mientras tanto, detrás de todo, se mueve la sombría Yakuza, la despiadada y poderosa internacional japonesa que manipula -o cree manipular-gentes y acontecimientos.</span>
+         </p>
+         <a href="#articulo3">Seguir leyendo</a>
+     </article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

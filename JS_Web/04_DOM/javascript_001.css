@@ -1,0 +1,27 @@
+html,body {background-color: #F7F8E0;
+	  font-family : Utopia,Sans-serif;}
+header {color: #0B0B61}
+article {margin-left: 5%;}
+code {color: #0B0B61}
+.verObjetos{
+	text-decoration: underline;
+	color : #990000;
+	} 
+.recuadro{
+    border: 5px double #443e8b;
+    padding-bottom : 10px;
+    padding-left : 20px;
+    padding-right : 10px;
+    padding-top : 10px;
+    width : 500px;
+  	}
+.codigo {
+	background-color: #0B0B61;
+	color: #F7FE2E;
+	border: 5px double #443e8b;
+	padding-bottom : 10px;
+	padding-left : 20px;
+	padding-right : 10px;
+	padding-top : 10px;
+	width : 500px;
+	}
