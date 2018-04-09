@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coordenada del raton</title>
+    <style>
+        body {
+            background-color: burlywood;
+            width: 2000px;
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.querySelector('body')
+        .addEventListener('mousemove', mousePosition)
+
+        function mousePosition(ev) {
+            console.log(ev.pageX, ev.pageY, ' / ', ev.clientX, ev.clientY, ' / ', ev.screenX, ev.screenY)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos de teclado</title>
+</head>
+<body>
+    <header><h1>Eventos de teclado</h1></header>
+    <main>
+        <input type="text" name="input" id="input">
+        <p id="output"></p>
+        <input type="text" name="input2" id="input2">
+        <p id="output2"></p>
+    </main>
+    <script>
+        /* document.querySelector('#input')
+        .addEventListener('keydown', teclado) */
+        document.querySelector('#input')
+        .addEventListener('keypress', teclado)
+
+        document.querySelector('#input2')
+        .addEventListener('input', inputTeclado)
+
+        let p = document.querySelector('#output')
+        let p2 = document.querySelector('#output2')
+
+        function teclado(ev) { 
+            let tecla =  String.fromCharCode(ev.charCode)
+            console.log(ev.type, '- keyCode', ev.keyCode)
+            console.log(ev.type, '- charCode ', ev.charCode)
+            console.log(ev.type, tecla)
+            p.innerHTML +=  tecla   
+        }
+
+        function inputTeclado() {
+            let inp = document.querySelector('#input2')
+            console.log(inp.value)
+            p2.innerHTML = inp.value
+        }
+
+
+    
+    </script>
+</body>
+</html>

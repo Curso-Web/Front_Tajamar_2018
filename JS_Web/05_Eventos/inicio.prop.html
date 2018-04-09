@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Eventos</h1>
+    </header>
+    <main>
+        <div class="form_group" id="btnGroup">
+            <button type="button" id="btnAceptar">Aceptar</button>
+            <button type="button" id="btnCancelar">Cancelar</button>
+        </div>
+    </main>
+    <script>
+
+        class App {
+
+            constructor() {
+
+                this.aMensajes = ['Aceptado', 'Cancelado', 'Pulsado Grupo']
+
+                document.querySelector('#btnAceptar').addEventListener(
+                    'click', this.btnAceptar.bind(this), true)
+
+                document.querySelector('#btnCancelar').addEventListener(
+                    'click', this.btnCancelar.bind(this), true)
+
+                document.querySelector('#btnGroup').addEventListener(
+                    'click', this.btnGroup.bind(this), true)
+            }
+
+            btnAceptar(ev) {
+                console.dir(this.aMensajes[0])
+            }
+
+            btnCancelar(ev) {
+                console.dir(this.aMensajes[1])
+            }
+
+            btnGroup(ev) {
+                console.dir(this.aMensajes[2])
+            }
+            
+        }
+
+        window.addEventListener('load', ()=>app = new App())
+         
+    </script>
+</body>
+
+</html>

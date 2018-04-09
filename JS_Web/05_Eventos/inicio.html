@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Eventos</h1>
+    </header>
+    <main>
+        <button type="button" id="btnPulsar">Pulsar</button>
+        <button type="button" id="btnPulsarM">Pulsar Moderno</button>
+        <a href="https://www.google.com" id="aPulsarM">Pulsar Moderno</a>
+    </main>
+    <script>
+
+        // Handler de eventos - DOM Level 0
+        document.querySelector('#btnPulsar').onclick = btnPulsar
+        
+        // Listener de eventos - DOM Level 2
+        document.querySelector('#btnPulsarM').addEventListener(
+        'click', btnPulsarM)
+
+        document.querySelector('#aPulsarM').addEventListener(
+        'click', btnPulsarM)
+
+        function btnPulsar(ev) {
+            let s = 'Hola soy un handler'
+            alert(s)
+            console.dir(ev)
+        }
+
+        function btnPulsarM(ev) {
+            ev.preventDefault()
+            let s = 'Hola soy el más moderno, un listener'
+            alert(s)
+            console.dir(this)
+            console.dir(ev.target)
+        }
+
+    </script>
+</body>
+
+</html>

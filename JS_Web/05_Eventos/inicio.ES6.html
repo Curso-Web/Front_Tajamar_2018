@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Eventos</h1>
+    </header>
+    <main>
+        <button type="button" id="btnPulsar">Pulsar</button>
+        <button type="button" id="btnPulsarM">Pulsar Moderno</button>
+        <a href="https://www.google.com" id="aPulsarM">Pulsar Moderno</a>
+    </main>
+    <script>
+
+        class App {
+
+            constructor() {
+
+                this.aMensajes = ['Hola soy un handler', 'Hola soy el más moderno, un listener']
+
+                // Handler de eventos - DOM Level 0
+                document.querySelector('#btnPulsar').onclick = this.btnPulsar.bind(this)
+
+                // Listener de eventos - DOM Level 2
+                document.querySelector('#btnPulsarM').addEventListener(
+                    'click', this.btnPulsarM.bind(this))
+
+                document.querySelector('#aPulsarM').addEventListener(
+                    'click', this.btnPulsarM, false)
+            }
+
+            btnPulsar(ev) {
+                alert(this.aMensajes[0])
+                console.dir(ev)
+            }
+
+            btnPulsarM(ev) {
+                ev.preventDefault()
+                alert(this.aMensajes[1])
+                console.dir(this)
+                console.dir(ev.target)
+            }
+        }
+
+        window.addEventListener('load', ()=>app = new App())
+         
+    </script>
+</body>
+
+</html>

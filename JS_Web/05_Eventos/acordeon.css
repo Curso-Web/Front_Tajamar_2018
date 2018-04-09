@@ -1,0 +1,25 @@
+*, *::after, *::before, *:after, *:before {
+    box-sizing: border-box;
+}
+body {
+    background-color: bisque;
+    margin: 3rem;
+}
+main {
+    min-height: 60vh;
+}
+h2 {
+    background: url(images/open.png) no-repeat 0 11px;
+    padding: 10px 0 0 25px;
+    cursor: pointer;
+}
+h2.close {
+    background-image: url(images/close.png);
+}
+.answer {
+    margin-left: 25px;	
+}
+.answer:not(:first-of-type) {
+    display: none;
+}
+
