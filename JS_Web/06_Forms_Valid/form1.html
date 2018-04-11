@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./form1.css">
+    <script src="./form_app_1.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Ejemplo de formulario</h1>
+    </header>
+    <main>
+        <form action="" method="GET" id='form1'>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div class="control-group">
+                    <label for="nombre">Escribe tu nombre</label>
+                    <input type="text" name="nombre" id="nombre" maxlength="20" 
+                     required minlength="2" autofocus>
+                </div>
+                <div class="control-group">
+                    <label for="apellido">Escribe tu apellido</label>
+                    <input type="text" name="apellido" id="apellido" 
+                    placeholder="Escribe tus apellidos" required>
+                </div>
+                <div id="div_fecha" class="control-group">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" name="fecha" id="fecha">
+                </div>                
+                <div class="control-group">
+                    <label for="email">Escribe tu correo</label>
+                    <input type="email" name="email" id="email" 
+                        required placeholder="Escribe tus correo">
+                </div>
+                <div class="control-group">
+                    <label for="passwd">Escribe tu contraseña</label>
+                    <input type="password" name="passwd" id="passwd" placeholder="Escribe tus contraseña">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Otros datos</legend>
+                <textarea name="datos" id="datos" cols="30" rows="10" placeholder="No te molestes en añadir nada"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Conformidad</legend>
+                <div class="check-group">
+                    <input type="checkbox" name="isOk" id="isOk">
+                    <label for="isOk">Estoy deacuero con las
+                        <a href="condiciones.html">condiciones</a>
+                    </label>
+                </div>
+                <div class="check-group">
+                    <input type="checkbox" name="isOk2" id="isOk2">
+                    <label for="isOk2">También estoy deacuero con ....</label>
+                </div>
+            </fieldset>
+            <fieldset id="acedemic" class="ocultar">
+                <legend>Datos academicos</legend>
+                <legend>Que turno quieres</legend>
+                <div class="radio-group">
+                    <input type="radio" name="turno" id="mañana" value="mañana" checked>
+                    <label for="mañana">Mañana</label>
+                    <input type="radio" name="turno" id="tarde" value="tarde">
+                    <label for="tarde">Tarde</label>
+                    <input type="radio" name="turno" id="noche" value="noche">
+                    <label for="noche">Noche</label>
+                </div>
+                <div class="control-group">
+                    <label for="curso">Selecciona un curso</label>
+                    <select name="curso" id="curso">
+                        <option value=""></option>
+                        <option value="front">Desarrollo Front</option>
+                        <option value="web">Diseño Web</option>
+                        <option value="node">Servidores</option>
+                        <option value="sql">Bases de Datos</option>
+                    </select>
+                </div>
+                <div id="div_topics" class="control-group ocultar">
+                    <label for="curso">Selecciona tres asignuras</label>
+                    <select name="topics" id="topics" multiple></select>
+                </div>                    
+            </fieldset>
+            <div class="control-group">
+                <button type="button" id="btnSaludar">Saludar</button>
+                <!-- <input type="button" value="Saludar"> -->
+                <button type="submit" id="btnEnviar">Enviar</button>
+                <!-- <input type="submit" value="Enviar"> -->
+                <button type="reset" id="btnBorrar">Borrar</button>
+                <!-- <input type="reset" value="Borrar"> -->
+                <input type="hidden" name="state" value="0">
+            </div>
+        </form>
+        <div id="resultados" class="resultados">
+        </div>
+    </main>
+</body>
+
+</html>
