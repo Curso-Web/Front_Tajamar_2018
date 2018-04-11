@@ -1,0 +1,120 @@
+.opacity body:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(internet1.jpg);
+        opacity: 0.1;
+        overflow:auto;
+        z-index: -1;
+    }
+body .container {
+    margin: 3em 9em;      
+}
+header {
+    text-align: center;
+		background-color: maroon;
+		color: white;
+		margin-bottom: 6em}
+footer { margin-top: 2em; }
+footer p {margin: 0px auto}
+.oculto {
+    display: none;
+}
+
+/*****************************
+    Elementos del FORMULARIO
+******************************/
+
+input[type='text'], textarea {
+    width: 30%;
+}
+textarea {
+    height: 5em;
+}
+label {
+    font-weight:700;
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+    padding-right: 1em;
+}
+    label.top {
+        vertical-align: top;
+    }
+    label.long {
+        width: auto;
+        text-align: right;
+        margin-right: 0.5em;
+    }
+
+:required, .required {
+    box-shadow: 4px 4px gray;
+    }
+input:invalid, .invalid {
+    box-shadow: 4px 4px maroon;
+}
+
+section div {
+    position: relative;
+}
+
+p.emergente {
+    background-color: white;
+    border: solid 1px #D4D4D4;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 3px;
+    width: 150px;
+    position: absolute;
+    top: -9px;
+    left: 40px;
+    padding: 4px;
+}
+    .emergente:after 
+    {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 7px 7px;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -7px;
+    left: 15px;
+    }
+
+    .emrgente:before 
+    {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 7px 7px;
+    border-color: #D4D4D4 transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    top: -8px;
+    left: 15px;
+    }
+/*****************************
+    LISTA de salida de datos
+******************************/
+
+ul {list-style: none;}
+li:nth-child(2n) {
+    background-color: beige;
+}
+li:nth-child(2n+1) {
+   background-color: gainsboro;
+}
+
+form {
+    margin-top: 3em;
+}
+    form div {
+        margin-top: 1em;
+    }
