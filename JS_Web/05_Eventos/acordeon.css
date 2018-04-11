@@ -13,13 +13,14 @@ h2 {
     padding: 10px 0 0 25px;
     cursor: pointer;
 }
-h2.close {
-    background-image: url(images/close.png);
-}
 .answer {
     margin-left: 25px;	
 }
-.answer:not(:first-of-type) {
+
+.close {
+    background-image: url(images/close.png);
+}
+.ocultar {
     display: none;
 }
 
