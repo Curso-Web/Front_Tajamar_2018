@@ -44,10 +44,6 @@ export class Formulario {
         this.domFormulario.addEventListener('submit', this.enviar.bind(this))
         this.domCbxIsOk.addEventListener('change', this.completar.bind(this))
         this.domSelectCurso.addEventListener('change', this.presentarAsignaturas.bind(this))
-
-        // Mensajes de validación    
-        // this.domInpNombre.setCustomValidity('Añade tu nombre, con al mennos 2 caracteres')
-        // this.domInpApellido.setCustomValidity('Añade tu apellido')
     }
 
     saludar() {
