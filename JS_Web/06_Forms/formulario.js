@@ -1,3 +1,5 @@
+import { CURSOS } from './cursos.js'
+
 export class Formulario {
     constructor() {
         this.datos = {
@@ -9,7 +11,8 @@ export class Formulario {
             isOk: false,
             isOk2: false,
             turno: '',
-            curso: {}
+            curso: {},
+            asignaturas: []
         }
         this.accederDom()   
         this.definirManejadores()
@@ -29,6 +32,8 @@ export class Formulario {
         this.domCbxIsOk = document.querySelector('#isOk')
         this.domCbxIsOk2 = document.querySelector('#isOk2')
         this.domSelectCurso = document.querySelector('#curso')
+        this.domSelectTopics = document.querySelector('#topics')
+        this.domDivTopics = document.querySelector('#div_topics')
         this.domDivResultados = document.querySelector('#resultados')
         this.domFieldAcedemic = document.querySelector('#acedemic')
     }
@@ -38,6 +43,7 @@ export class Formulario {
         this.domBtnEnviar.addEventListener('click', this.enviar.bind(this))
         this.domBtnBorrar.addEventListener('click', this.borrar.bind(this))
         this.domCbxIsOk.addEventListener('change', this.completar.bind(this))
+        this.domSelectCurso.addEventListener('change', this.presentarAsignaturas.bind(this))
     }
 
     saludar() {
@@ -90,6 +96,14 @@ export class Formulario {
             code: nodo.options[index].value, 
             text: nodo.options[index].textContent
         }    
+    }
+
+    presentarAsignaturas(ev) {
+        let topics = CURSOS[ev.target.selectedIndex-1].asignaturas
+        let HTMLResult = ''
+        topics.forEach( elem => HTMLResult +=`<option>${elem}</option>` )
+        this.domDivTopics.classList.remove('ocultar')
+        this.domSelectTopics.innerHTML = HTMLResult
     }
 
     presentarDatos() {
