@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3">
+	<meta name="author" content="Alejandro" >
+	<meta name="application-name" content="…">
+	<meta name="description" content="Ejercicios de HTML5">
+	<meta name="generator" content="Bluefish 2.2.4" >
+	<meta charset="UTF-8">
+	<title>Imágenes</title>
+	<link rel="stylesheet" href="default.css">
+	<link rel="shortcut icon" href="fav_icon.png">
+	<script>
+
+        // Ejemplo de un rollover con pre-carga de las imágenes
+        //----------------------------------------------
+
+        function main() {
+            // se crean los objetor Image asociados a determinados ficheros
+		    var oFoto1 = new Image(),
+                oFoto2 = new Image();
+		    oFoto1.src = "images/537278_luis_royo.jpg";
+		    oFoto1.alt = "Sin título - Luis Royo"
+		    oFoto1.title = "Sin título - Luis Royo"
+		    oFoto2.src = "images/205356_luis_royo.jpg";
+		    oFoto2.alt = "Multiplied by Ice - Luis Royo - Secrets"
+		    oFoto2.title = "Multiplied by Ice - Luis Royo - Secrets"
+
+            // se asigna un tamaño fijo a las imágenes
+		    //var imgsWidth = 800;
+		    //oFoto1.width = imgsWidth;	
+		    //oFoto2.width = imgsWidth;
+
+            // se asigna un tamaño a las imágenes basado en el de los ficheros originales
+            // para poder hacerlo es necesario esperar a que se hayan cargado las imágenes
+		    oFoto1.addEventListener("load", function () {
+		        oFoto1.width = oFoto1.width / 2;
+		        console.log(oFoto1.width)
+		    })
+
+		    oFoto2.addEventListener("load", function () {
+		        oFoto2.width = oFoto2.width / 2;
+		        console.log(oFoto2.width)
+		    })
+
+            // acceso al nodo que presentara las imágenes
+		    var domImagen = document.querySelector("img");
+            // se asocia el nodo y el objeto imagen
+		    domImagen.src = oFoto2.src;
+            // se establece el ancho en el nodo a partir del ancho del objeto
+		    oFoto2.addEventListener("load", function () {
+		        domImagen.width = oFoto2.width;
+		    });
+            // manejadores de la interaccion de las imagenes y el ratón
+		    domImagen.addEventListener("mouseover", cambiaImagen);
+		    domImagen.addEventListener("mouseout", cambiaImagen);
+
+		    function cambiaImagen(oE) {
+
+		        if (oE.type == "mouseover") {
+		            oE.target.src = oFoto1.src;
+		            oE.target.width = oFoto1.width;
+		            oE.target.alt = oFoto1.alt;
+		            oE.target.title = oFoto1.title;
+		        } else {
+		            oE.target.src = oFoto2.src;
+		            oE.target.width = oFoto2.width;
+		            oE.target.alt = oFoto2.alt;
+		            oE.target.title = oFoto2.title;
+                }
+
+		    }
+
+		}
+		window.onload = main;
+	</script>  
+
+</head>
+
+<body>
+	<h1>Cambiando una imágen</h1>
+	<p><img alt="Imágenes que cambian" title="Imágenes que cambian"/></p>
+</body>
+</html>

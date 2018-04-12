@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3">
+	<meta name="author" content="Alejandro" >
+	<meta name="application-name" content="…">
+	<meta name="description" content="Ejercicios de HTML5">
+	<meta name="generator" content="Bluefish 2.2.4" >
+	<meta charset="UTF-8">
+	<title>Imágenes</title>
+	<link rel="stylesheet" href="default.css">
+	<link rel="shortcut icon" href="fav_icon.png">
+	<script>
+
+          function cambiaImagen(oE) {
+            if (oE.type == "mouseover") {
+                oE.target.src = "images/537278_luis_royo.jpg"
+            } else {
+                oE.target.src = "images/205356_luis_royo.jpg"
+            }
+        }
+
+		function main() {
+		    var domImagen = document.querySelector("img");
+		    domImagen.src = "images/205356_luis_royo.jpg";
+		    domImagen.width = 800;
+		    domImagen.addEventListener("mouseover", cambiaImagen);
+		    domImagen.addEventListener("mouseout", cambiaImagen);
+		}
+
+		window.onload = main;
+	</script>  
+
+</head>
+
+<body>
+	<h1>Cambiando una imágen</h1>
+	<figure><img alt="Imágenes que cambian" title="Imágenes que cambian"/></figure>
+</body>
+</html>
