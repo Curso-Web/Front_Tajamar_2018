@@ -1,0 +1,47 @@
+*, 
+*::before, *::after, 
+*:before, *:after { 
+    box-sizing : border-box;
+}
+
+div.flotar {
+    width: 90%;
+    margin: 2rem auto;
+    border: 1px solid grey;
+    /*overflow: hidden;*/
+}
+
+div.flotar:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*  4 columnas al 22% = 88% -> sobra 12%*/
+/*  4 columnas al 23.5% = 94% -> sobra 6%*/
+.flotar p {
+    width: 23.5%;
+    float: left;
+    background-color: darksalmon;
+    padding: 2rem 1rem;
+}
+
+.flotar p:not(:last-of-type) {
+    margin-right: 2%;
+}
+
+div.inline {
+    width: 90%;
+    margin: 2rem auto;
+    border: 1px solid grey;
+}
+
+.inline p {
+    width: 25%;
+    background-color: darksalmon;
+    padding: 2rem 2rem;
+    display: inline-block;
+}
+.inline p:not(:first-of-type) {
+    margin-left: -5px
+}

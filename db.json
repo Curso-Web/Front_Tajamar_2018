@@ -4,6 +4,28 @@
       "id": 1,
       "autor": "Pepe",
       "title": "Cosas de Pepe"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "title": "El Señor de los Anillos",
+      "author": "JRR Tolkien",
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "title": "El Hobbit",
+      "author": "JRR Tolkien",
+      "id": 7
     }
   ],
   "comments": [
