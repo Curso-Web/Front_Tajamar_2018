@@ -31,7 +31,6 @@ export class Main {
                 console.log(this.aLibros)
                 this._crearLista(this.aLibros)
             })
-
     }
 
     _crearLista(aDatos) {
