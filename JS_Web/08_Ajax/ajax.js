@@ -31,7 +31,10 @@ function app() {
             }
         }
         
-        conectar(metodo, url, null, stateChange)   
+        conectar(metodo, url, null, mostrarDatos)  
+        function mostrarDatos(response) {
+            console.dir(response)
+        }
     }
 
     function deleteDatos(ev) {
@@ -43,17 +46,21 @@ function app() {
         } else {
             return
         }
-        conectar(metodo, url, null, stateChange)
+        conectar(metodo, url, null, mostrarBorrado)
+
+        function mostrarBorrado(response) {
+            console.dir("Datos Borrados")
+            console.dir(response)
+        }
     } 
 
     function postDatos () {
         let data = {
-            id: undefined,
-            title: "El Señor de los Anillos",
-            author: "JRR Tolkien"}
+            title: "Nuevo post",
+            author: "Alejandro"}
         let metodo = 'POST'
         let url = 'http://localhost:3000/posts'
-        conectar(metodo, url, JSON.stringify(data), stateChange)
+        conectar(metodo, url, JSON.stringify(data), responder)
     }
 
     function putDatos(ev) {
@@ -68,32 +75,36 @@ function app() {
         } else {
             return
         }
-        conectar(metodo, url, JSON.stringify(data), stateChange)      
+        conectar(metodo, url, JSON.stringify(data), responder)      
     }
 
-    function stateChange () {
-        console.log("Cambio de estado")
-        console.log(ajax.readyState)
-        if (ajax.readyState === 4) {
-            console.log("Comunicación OK")
-            if(ajax.status === 200) {
-                let response = JSON.parse(ajax.responseText)
-                console.dir(response)
-            } else {
-                console.log(ajax.status)
-                console.log(ajax.statusText)
-            }
-        }
+    function responder(response) {
+        console.dir(response)
     }
 
-    function conectar(metodo, url, data, funcion) {
+
+    function conectar(metodo, url, data, callback) {
         ajax = new XMLHttpRequest()
-        ajax.onreadystatechange = funcion
+        ajax.onreadystatechange = stateChange
         ajax.open(metodo, url)
         ajax.setRequestHeader('Content-Type', 'application/json')
         ajax.setRequestHeader('Accept',  'application/json')
-        console.log(data)
         ajax.send(data)
+
+        function stateChange () {
+            console.log("Cambio de estado")
+            console.log(ajax.readyState)
+            if (ajax.readyState === 4) {
+                console.log("Comunicación OK")
+                if(ajax.status === 200) {
+                    let response = JSON.parse(ajax.responseText)
+                    callback(response)
+                } else {
+                    console.log(ajax.status)
+                    console.log(ajax.statusText)
+                }
+            }
+        }
 
     }
 }

@@ -1,31 +1,24 @@
 {
   "posts": [
     {
-      "id": 1,
-      "autor": "Pepe",
-      "title": "Cosas de Pepe"
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
+      "title": "Neuromante",
+      "author": "William Gibson",
+      "id": 1
     },
     {
       "title": "El Señor de los Anillos",
       "author": "JRR Tolkien",
-      "id": 5
-    },
-    {
-      "id": 6
+      "id": 2
     },
     {
       "title": "El Hobbit",
       "author": "JRR Tolkien",
-      "id": 7
+      "id": 3
+    },
+    {
+      "title": "Alicia en el País de las Maravillas",
+      "author": "Lewis Carroll",
+      "id": 4
     }
   ],
   "comments": [
