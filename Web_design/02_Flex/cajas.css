@@ -1,0 +1,19 @@
+main {
+    background-color: paleturquoise;
+    display: flex;
+    /*justify-content: space-between*/
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: column-reverse
+}
+div {
+    font-size: 5rem;
+    padding: 1rem;
+    background-color: salmon;
+    border: 1px solid seashell;
+}
+
+div:nth-of-type(3) {
+    font-size: 6rem;
+}
