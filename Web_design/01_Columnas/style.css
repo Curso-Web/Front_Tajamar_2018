@@ -1,0 +1,56 @@
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.header, .footer {
+    min-height: 6rem;
+    background-color: brown;
+    color: palegoldenrod;
+}
+
+.main {
+    overflow: auto;
+    min-height: 60vh
+}
+
+.columnas_2 {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
+}
+
+.columnas_2 p:nth-of-type(1) {
+    margin-top: 0px;
+}
+
+.tabla {
+    display: table;
+    width: 100%;
+}
+.fila {
+    display: table-row;
+    width: 100%;
+}
+.columna {
+    display: table-cell;
+    width: 50%;
+    padding: 2rem;
+    background-color: antiquewhite
+}
+
+.lado {
+    float: left;
+    padding: 3rem;
+}
+.lado_izda {
+    width: 80%;
+}
+
+.lado_dcha {
+    width: 20%;
+}
+
+
+
